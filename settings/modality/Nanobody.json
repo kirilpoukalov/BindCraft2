@@ -7,7 +7,7 @@
     "folded_back"
   ],
   "weights_binder_intra_coldspot": 1.0,
-  "weights_binder_coldspot": 1.0,
+  "weights_binder_coldspot": 0.8,
   "losses": {
     "binder_coldspot": {
       "params": {
