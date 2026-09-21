@@ -3,20 +3,9 @@
   "binder_scaffold": "scaffolds/Nanobody.cif",
   "mutate_positions": "A26-36,A54-61,A100-117",
   "weights_binder_coldspot": 0.8,
-  "losses": {
-    "binder_coldspot": {
-      "params": {
-        "designed_only": false
-      }
-    }
-  },
   "design_models": 3,
   "validation_model": "multimer",
   "min_scaffold_sequence_retained_final": 1.0,
-  "aa_bias": {
-    "F": 0.7,
-    "W": 0.3,
-    "Y": 0.9
-  },
+  "aa_bias": { "F": 0.7, "W": 0.3, "Y": 0.9 },
   "min_monomer_plddt_final": 0.7
 }
