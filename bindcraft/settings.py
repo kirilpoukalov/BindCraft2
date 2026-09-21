@@ -352,7 +352,7 @@ def configure_campaign_features(settings: dict, request: ConfigurationRequest) -
 
 CAMPAIGN_PRESETS = Path(__file__).parent.parent / 'settings'
 PRESET_TIERS = 'modality', 'property', 'target'
-BINDER_FORMATS = 'binder', 'large_binder', 'peptide', 'cyclic_peptide', 'homo_oligomer', 'multidomain', 'VHH', 'scFv', 'Fab', 'ARP'
+BINDER_FORMATS = 'binder', 'large_binder', 'peptide', 'cyclic_peptide', 'homo_oligomer', 'multidomain', 'VHH', 'Nanobody', 'scFv', 'Fab', 'ARP'
 
 def shipped_preset_names(tier: str, presets: Path=CAMPAIGN_PRESETS) -> tuple[str, ...]:
     return tuple(sorted(path.stem for path in (presets / tier).glob('*.json')))

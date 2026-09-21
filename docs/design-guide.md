@@ -184,6 +184,7 @@ The **modality** sets the binder format and the conformational objective. Name i
 | `homo_oligomer` | Identical copies of one 40–120 residue chain (lengths are per copy) | A symmetric homo-oligomeric binder — and the natural choice for a **symmetric target** (e.g. homotrimeric TNFα) a single-chain binder struggles with. Set `copies`. |
 | `multidomain` | Two domains on one 120–300 residue chain | A two-domain binder with separation/linker objectives. |
 | `VHH` | Single-domain antibody scaffold, editable CDRs; samples extended and folded-back CDR3 | Single-domain antibody (VHH) format (see conformation note below). |
+| `Nanobody` | Camelid single-domain scaffold from PDB 3EAK, editable CDRs; samples extended and folded-back CDR3 | Same format as `VHH`, on a camelid rather than human-germline framework. |
 | `scFv` | Heavy + light variable domains as two chains, no linker designed | scFv-format binders. |
 | `Fab` | Heavy + light chains, editable variable domains, constant body kept off the target | Fab-format binders. |
 | `ARP` | Ankyrin Repeat protein — a consensus ankyrin-repeat scaffold with editable repeat positions | Ankyrin-repeat (ARP) binders. |
@@ -226,6 +227,7 @@ The **modality** sets the binder format and the conformational objective. Name i
 | `homo_oligomer` | Symmetric, multivalent binders — avidity, receptor **clustering/agonism**, and self-assembling building blocks. Especially good for **symmetric targets** that a monomeric binder handles poorly (e.g. homotrimeric **TNFα**): a matched Cₙ oligomer can engage every protomer of the symmetric target at once. |
 | `multidomain` | Single-chain **biparatopic/bispecific** reach across two epitopes (or two targets), and larger, higher-avidity architectures. |
 | `VHH` | Single-domain antibodies for **concave/cryptic epitopes and enzyme active sites**, intrabodies, crystallisation chaperones, imaging, and modular fusion building blocks. |
+| `Nanobody` | The same uses as `VHH`, when a **camelid** framework and a native long CDR3 are wanted over the human-germline one — for example to match a published camelid nanobody series. Being non-human, it carries more immunogenicity risk for therapeutic use; stack `--humanize` if that matters. |
 | `scFv` | Variable-fragment format for **CAR-T binding domains** and bispecific/multispecific building blocks — when the downstream construct needs an scFv specifically. Least stable of the antibody formats. |
 | `Fab` | The classic therapeutic/diagnostic antibody fragment: more stable and manufacturable than an scFv, and the base the scFv here is derived from. |
 | `ARP` | Ankyrin Repeat protein — non-antibody, disulfide-free, high-stability scaffold: cheap microbial production, intracellular use, and easy multivalent fusions. |
@@ -247,6 +249,7 @@ the framework carries no IP: the germline is retained and only the CDRs are desi
 | `Fab` | `scaffolds/Fab.cif` | VH **IGHV3-23\*01** (IMGT M99660) + VL **IGKV1-39\*01** (IMGT X59315). VH3 is the most stable heavy family and Vκ1 the preferred light family, so VH3-23/Vκ1-39 is the safe, well-behaved pairing. Variable domains editable; the constant body is kept off the target. |
 | `scFv` | `scaffolds/scFv.cif` | The **same IGHV3-23\*01 + IGKV1-39\*01** framework as the Fab, as its VH (1–119) and VL (1–107). BC2 models the **two variable domains as separate chains with no linker** — it designs the domains; you add the VH–VL linker yourself when you build the construct. |
 | `VHH` | `scaffolds/VHH.cif` | A **human IGHV3-23\*01** autonomous single-domain (VHH-format) VH (IMGT M99660; FR4 from IGHJ4\*01), CDRs editable, both CDR3 conformations sampled (see below). It uses the human-germline **GLEW** FR2, not the camelid ERE hallmark. |
+| `Nanobody` | `scaffolds/Nanobody.cif` | Chain A of **PDB 3EAK** (NbBCII10-FGLA, *Camelus dromedarius*), 127 residues, waters and the unresolved C-terminal His-tag dropped and residues numbered 1–127. A genuine **camelid** VHH framework with its native 18-residue CDR3. Paratope: CDR1 26–35, CDR2 54–61, CDR3 100–117; the FR2 face the CDR3 packs onto (36, 38, 40, 48, 49, 50, 52, 53) is declared as framework. Unlike `VHH` this is **not** a human germline scaffold. |
 | `ARP` (Ankyrin Repeat protein) | `scaffolds/ARP.cif` | A full-consensus designed ankyrin-repeat protein — the repeat framework held fixed with the variable repeat positions opened. A synthetic consensus scaffold, not an antibody germline. |
 
 > **Naming and IP.** BC2 deliberately builds on non-proprietary frameworks: the antibody scaffolds use

@@ -1,7 +1,7 @@
 {
-  "description": "The Nanobody scaffold with editable CDRs; samples both paratope conformations",
-  "binder_scaffold": "scaffolds/VHH.cif",
-  "mutate_positions": "A26-36,A54-61,A100-117",
+  "description": "A camelid nanobody (VHH) scaffold from PDB 3EAK (NbBCII10-FGLA) with editable CDRs; samples both paratope conformations",
+  "binder_scaffold": "scaffolds/Nanobody.cif",
+  "mutate_positions": "A26-35,A36*,A38*,A40*,A48*,A49*,A50*,A52*,A53*,A54-61,A100-117",
   "paratope_conformations": [
     "extended",
     "folded_back"

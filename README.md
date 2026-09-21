@@ -117,6 +117,7 @@ Choose a binder format, then add compatible targeting or conformational options.
 | **Homo-oligomer** | [homo_oligomer](settings/modality/homo_oligomer.json) | An assembly of identical binder chains. Set `copies` for the number of chains. |
 | **Multidomain binder** | [multidomain](settings/modality/multidomain.json) | Several domains connected within one binder chain. |
 | **VHH** | [VHH](settings/modality/VHH.json) | A single-domain antibody (VHH) binder built from a VHH scaffold. |
+| **Nanobody (camelid)** | [Nanobody](settings/modality/Nanobody.json) | A single-domain binder built from a camelid VHH scaffold taken from PDB 3EAK, with its native long CDR3. See the note on naming and IP in the design guide. |
 | **Ankyrin Repeat protein (ARP)** | [ARP](settings/modality/ARP.json) | A binder built from a consensus ankyrin-repeat scaffold. |
 | **scFv variable domains** | [scFv](settings/modality/scFv.json) | Paired antibody variable domains. BC2 models two chains; the connecting linker must be designed separately. |
 | **Fab** | [Fab](settings/modality/Fab.json) | An antibody-binding fragment with heavy and light chains, including their constant domains. |
