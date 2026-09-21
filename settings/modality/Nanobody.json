@@ -1,12 +1,7 @@
 {
   "description": "A camelid nanobody (VHH) scaffold from PDB 3EAK (NbBCII10-FGLA) with editable CDRs; samples extended and folded-back CDR3",
   "binder_scaffold": "scaffolds/Nanobody.cif",
-  "mutate_positions": "A26-36,A50*,A54-61,A62*,A100-117",
-  "paratope_conformations": [
-    "extended",
-    "folded_back"
-  ],
-  "weights_binder_intra_coldspot": 1.0,
+  "mutate_positions": "A26-36,A54-61,A100-117",
   "weights_binder_coldspot": 0.8,
   "losses": {
     "binder_coldspot": {
